@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "menuitemkuber-0c94"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "menuitemkuber-0c94"
+  template:
+    metadata:
+      labels:
+        app: "menuitemkuber-0c94"
+    spec:
+      containers:
+        - name: "menuitemkuber-0c94"
+          image: "menukubernetes.azurecr.io/menuitemkuber"
+          ports:
+          - containerPort: 80
